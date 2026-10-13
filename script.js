@@ -13,6 +13,7 @@ function criarElementoTarefa(tarefa) {
     const descricaoTarefa = document.createElement('p');
     descricaoTarefa.classList.add('descricao-tarefa');
     descricaoTarefa.textContent = tarefa;
+    descricaoTarefa.title = tarefa;
 
     const botaoTarefaConcluida = document.createElement('button');
     botaoTarefaConcluida.classList.add('botao-tarefa-concluida');
@@ -25,6 +26,8 @@ function criarElementoTarefa(tarefa) {
     botaoTarefaConcluida.addEventListener('click', () => {
         statusTarefa.textContent = '✓';
         descricaoTarefa.classList.add('tarefa-concluida');
+        botaoTarefaConcluida.style.backgroundColor = '#13C279';
+        botaoTarefaConcluida.style.color = 'white';
     });
 
     botaoExcluirTarefa.addEventListener('click', () => {

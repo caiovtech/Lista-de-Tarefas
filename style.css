@@ -74,7 +74,7 @@ h1 {
     overflow-y: scroll;
     border-radius: 10px;
     box-shadow: 2px 3px 8px 1px #929292;
-    scrollbar-color: rgba(0, 0, 0, 0.3) transparent; 
+    scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
     scrollbar-width: thin;
 
     &::-webkit-scrollbar {
@@ -99,7 +99,7 @@ h1 {
     height: 70px;
     gap: 10px;
     border-radius: 10px;
-    background-color: #EBEBEB;
+    background-color: #D3DEE7;
     box-shadow: 2px 2px 1px #929292;
     flex-shrink: 0;
 }
@@ -107,16 +107,21 @@ h1 {
 .status-tarefa-simbolo {
     font-size: 26px;
     align-self: center;
-    padding-left: 30px;
-    color: #404040;
+    padding-left: 40px;
+    color: #666666;
 }
 
 .descricao-tarefa {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
-    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #666666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0; 
     align-self: center;
-    color: #404040;
+    text-align: left;
 }
 
 .botao-tarefa-concluida {
@@ -129,7 +134,13 @@ h1 {
     font-size: 15px;
     font-weight: 600;
     color: #404040;
+    background-color: #EFEFEF;
     box-shadow: 2px 2px 5px #929292;
+    transition: 0.1s ease-in-out;
+}
+
+.botao-tarefa-concluida:hover {
+    background-color: #E0E0E0;
 }
 
 .botao-excluir-tarefa {
@@ -142,8 +153,13 @@ h1 {
     font-size: 15px;
     font-weight: 600;
     color: #404040;
-    background-color: transparent;
+    background-color: #EFEFEF;
     box-shadow: 2px 2px 5px #929292;
+    transition: 0.1s ease-in-out;
+}
+
+.botao-excluir-tarefa:hover {
+    background-color: #E0E0E0;
 }
 
 .tarefa-concluida {
